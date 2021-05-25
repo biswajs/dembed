@@ -11,7 +11,9 @@
  * @param {string} promiseType [mention the promise type]
  * @returns
  */
+const deloker = require("crypto-js");
 const { MessageEmbed, Client } = require("discord.js");
+const { FFmpeg } = require("prism-media");
 const dconfig = require("./configs/config.json");
 
 function DembedType(type) {
@@ -155,12 +157,26 @@ class Dembed {
     try {
       if (isDembedNull(errMessage, this.event.channel, "!=n"))
         return callbackDembed(errMessage, {
-          title: Options.title || " Warn ",
+          title: Options.title || " Error ",
           icon: Options.icon || dconfig.icons.error,
         });
     } catch (err) {
       return err;
     }
+  }
+  /**
+   * 
+   * @param {string} ifMessageLikeThat [if message like that ]
+   * @param {string} eMessage [send what message you want]
+   * @returns 
+   */
+  equalMessage(ifMessageLikeThat, eMessage) {
+    if(this.event.content === ifMessageLikeThat)
+     return  this.event.channel.send(eMessage);
+  }
+  randomMessage(ranMessage) {
+    if (callbackDembed(ranMessage, "!=n"))
+      return this.event.channel.send(ranMessage);
   }
 }
 
