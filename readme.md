@@ -5,6 +5,7 @@
 - Can send Rich Embed
 - Can send premade Embed
 - Tons of Commands added
+- Can send custom embed message
 
 
 
