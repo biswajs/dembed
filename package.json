@@ -1,0 +1,24 @@
+{
+  "name": "dembed",
+  "version": "1.0.0",
+  "description": "Discord Embed Made Easy - send embeds ",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biswajs/dembed.git"
+  },
+  "keywords": [
+    "discordjs",
+    "discord-embed",
+    "discord-bot-embed"
+  ],
+  "author": "Biswa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biswajs/dembed/issues"
+  },
+  "homepage": "https://github.com/biswajs/dembed#readme"
+}
